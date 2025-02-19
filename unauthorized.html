@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>401 - Access Denied</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 100vh;
+            flex-direction: column;
+            font-family: 'Exo', sans-serif;
+            text-align: left;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 8rem;
+            margin: 0;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+        .hint {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            font-size: 1rem;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>401</h1>
+    <p class="hint">You are not allowed to view this</p>
+    <p>Access Denied: Unauthorized request</p>
+    <div class="links">
+        <a href="javascript:history.back()" class="link">Go Back</a>
+        <a href="/" class="link">Go Home</a>
+    </div>
+    <script>
+        const colors = ['#E1515F', '#88F6FB', '#FFCF70'];
+        document.querySelectorAll('.link').forEach(link => {
+            link.style.color = colors[Math.floor(Math.random() * colors.length)];
+        });
+    </script>
+</body>
+</html>
